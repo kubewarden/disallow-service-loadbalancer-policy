@@ -1,4 +1,4 @@
-name: psp-disallow-service-loadbalancer
+name: disallow-service-loadbalancer
 description: A policy that prevents the creation of Service resources of type `LoadBalancer`
 homepage: https://github.com/kubewarden/disallow-service-loadbalancer-policy
 author:
