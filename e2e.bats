@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 @test "accept because not a LoadBalancer service" {
-  run kwctl run -e gatekeeper policy.wasm -r test_data/service-clusterip.json 
+  run kwctl run -e gatekeeper annotated-policy.wasm -r test_data/service-clusterip.json
 
   # this prints the output when one the checks below fails
   echo "output = ${output}"
@@ -12,7 +12,7 @@
 }
 
 @test "reject because LoadBalancer services are not allowed" {
-  run kwctl run -e gatekeeper policy.wasm -r test_data/service_loadbalancer.json
+  run kwctl run -e gatekeeper annotated-policy.wasm -r test_data/service_loadbalancer.json
 
   # this prints the output when one the checks below fails
   echo "output = ${output}"
