@@ -1,5 +1,5 @@
 ---
-version: 0.1.4
+version: 0.1.5
 name: disallow-service-loadbalancer
 displayName: Disallow Service Loadbalancer
 createdAt: '2023-01-19T14:46:21+02:00'
@@ -8,12 +8,12 @@ license: Apache-2.0
 homeURL: https://github.com/kubewarden/disallow-service-loadbalancer-policy
 containersImages:
 - name: policy
-  image: ghcr.io/kubewarden/policies/disallow-service-loadbalancer:v0.1.4
+  image: ghcr.io/kubewarden/policies/disallow-service-loadbalancer:v0.1.5
 keywords:
 - service
 links:
 - name: policy
-  url: https://github.com/kubewarden/disallow-service-loadbalancer-policy/releases/download/v0.1.4/policy.wasm
+  url: https://github.com/kubewarden/disallow-service-loadbalancer-policy/releases/download/v0.1.5/policy.wasm
 - name: source
   url: https://github.com/kubewarden/disallow-service-loadbalancer-policy
 provider:
