@@ -7,7 +7,7 @@
 version: 0.1.8
 name: disallow-service-loadbalancer
 displayName: Disallow Service Loadbalancer
-createdAt: 2023-07-07T18:01:28.597620555Z
+createdAt: 2023-10-16T08:32:30.140984083Z
 description: A policy that prevents the creation of Service resources of type `LoadBalancer`
 license: Apache-2.0
 homeURL: https://github.com/kubewarden/disallow-service-loadbalancer-policy
@@ -25,6 +25,10 @@ install: |
   The policy can be obtained using [`kwctl`](https://github.com/kubewarden/kwctl):
   ```console
   kwctl pull ghcr.io/kubewarden/policies/disallow-service-loadbalancer:v0.1.8
+  ```
+  Then, generate the policy manifest and tune it to your liking. For example:
+  ```console
+  kwctl scaffold manifest -t ClusterAdmissionPolicy registry://ghcr.io/kubewarden/policies/disallow-service-loadbalancer:v0.1.8
   ```
 maintainers:
 - name: Kubewarden developers
