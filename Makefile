@@ -21,7 +21,6 @@ test:
 
 
 annotated-policy.wasm: policy.wasm metadata.yml
-annotated-policy.wasm: policy.wasm metadata.yml artifacthub-pkg.yml
 	kwctl annotate -m metadata.yml -u README.md -o annotated-policy.wasm policy.wasm
 
 .PHONY: e2e-tests
