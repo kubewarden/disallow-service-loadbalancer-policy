@@ -22,13 +22,13 @@ jobs:
       packages: write
       # Required by cosign keyless signing
       id-token: write
-    uses: kubewarden/github-actions/.github/workflows/reusable-release-policy-rego.yml@ba3d7040a8411ca3ecbd7cb25d20ab9c5be5edd0 # v4.5.0
+    uses: kubewarden/github-actions/.github/workflows/reusable-release-policy-rego.yml@7195340a122321bf547fda2ffc07eed6f6ae43f6 # v4.5.1
     with:
       oci-target: ghcr.io/${{ github.repository_owner }}/policies/disallow-service-loadbalancer
 
   release-catalog:
     needs: release
-    uses: kubewarden/github-actions/.github/workflows/reusable-release-policy-catalog.yml@ba3d7040a8411ca3ecbd7cb25d20ab9c5be5edd0 # v4.5.0
+    uses: kubewarden/github-actions/.github/workflows/reusable-release-policy-catalog.yml@7195340a122321bf547fda2ffc07eed6f6ae43f6 # v4.5.1
     secrets:
       # Required to dispatch the release event to the policy-catalog repository
       APP_ID: ${{ secrets.APP_ID }}
